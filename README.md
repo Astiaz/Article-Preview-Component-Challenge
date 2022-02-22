@@ -26,8 +26,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://astiaz.github.io/Article-Preview-Component-Challenge/)
+- Solution URL: [Solution](https://www.frontendmentor.io/challenges/article-preview-component-dYBN_pYFT/hub/article-preview-component-solution-yRHRIQTNQ)
+- Live Site URL: [Live Site](https://astiaz.github.io/Article-Preview-Component-Challenge/)
 
 ## My process
 
