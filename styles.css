@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;500;700&display=swap');
+
 
 :root{
 
@@ -93,14 +94,158 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+
     width: 30px;
     height: 30px;
     border-radius: 50px;
+
+    
+    cursor: pointer;
+    z-index: 5;
+    
+    background-position-x: center;
+    background-position-y: center;
+    background-repeat: no-repeat;
+    background-image: url('./images/icon-share.svg');
     background-color: var(--LightGrayishBlue);
+    
+}
+
+.active{
+    background-color: var(--GrayishBlue);
+    background-image: url('./images/icon-share-white.svg');
+    background-position-y: center;
+    background-position-x: center;
+}
+
+.front{
+    display: none;
+    position: absolute;
+    bottom: 105px;
+}
+
+.overlay__cta{
+    display: flex;
+    align-items: center;
+    
+    height: 80px;
+    width: 330px;
+    padding-left: 30px;
+    border-radius: 0px 0px 10px 10px;
+
+    background-color: var(--VeryDarkGrayishBlue); 
+}
+
+.text__overlay{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.share{
+    letter-spacing: 2px;
+    color: var(--LightGrayishBlue);
+}
+
+.socialMedia__icon{
+    display: flex;
+    justify-content: space-between;
+    width: 90px;
+}
+
+.media_icon{
     cursor: pointer;
 }
 
-.share_icon{
-    width: 15px;
-    height: 13px;
+@media (min-width: 1440px) {
+    .card__container{
+        display: flex;
+        width: 800px;
+        height: 320px;
+    }
+
+    .card__image{
+        height: 350px;
+        min-width: 350px;
+        background-position-x: -10px;
+        background-position-y: -30px;
+    }
+
+    .card__main{
+        padding: 0;
+    }
+
+    .title{
+        font-size: 22px;
+        /* letter-spacing: 1px; */
+    }
+
+    .avatar_name{
+        font-weight: 700;
+    }
+
+    .details{
+        font-size: var(--fs);
+    }
+    
+    .card__info{
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    .card__cta{
+        justify-content: space-between;
+        margin-bottom: 0;
+    }
+
+    .cta__icon{
+        width: 40px;
+        height: 40px;
+        border-radius: 50px;
+    }
+
+    .front{
+        top: 49%;
+        left: 63%;
+        z-index: 4;
+    }
+    
+    .overlay__cta{
+        align-items: center;
+        justify-content: center;
+
+        font-weight: 200;
+        
+        height: 60px;
+        width: 250px;
+
+        border-radius: 10px;
+        padding: 0;
+
+    }
+
+    .front::after{
+        content: ' ';
+        display: block;
+        width: 20px;
+        height: 20px;
+        position: relative;
+        left: 48%;
+        bottom: 6%;
+        transform: rotate(45deg);
+
+        z-index: -1;
+        background-color: var(--VeryDarkGrayishBlue);
+    }
+
+
+}
+
+@media (min-width: 1024px) {
+    .front{
+        bottom: 230px;
+    }
 }

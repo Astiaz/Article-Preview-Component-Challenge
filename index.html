@@ -12,39 +12,61 @@
 	
 	<section class="card__container">
 		<section class="card__image"></section>
-		<section class="card__main">
-			<p class="text__primary title">	
-				Shift the overall look and feel by adding these wonderful 
-				touches to furniture in your home
-			</p>
-			<p class="text__secondary">
-				Ever been in a room and felt like something was missing? Perhaps 
-				it felt slightly bare and uninviting. I’ve got some simple tips 
-				to help you make any room feel complete.
-			</p>
-		</section>
-		<section class="card__cta">
-			<section class="cta__user">
-				<figure class="cta__image">
-					<img src="./images/avatar-michelle.jpg" alt="user icon" class="avatar">
-				</figure>
-				<div class="text">
-					<p class="text__primary avatar_name">
-						Michelle Appleton
-					</p>
-					<p class="text__secondary details">
-						28 Jun 2020
-					</p>
-				</div>
+		<section class="card__info">
+			<section class="card__main">
+				<p class="text__primary title">	
+					Shift the overall look and feel by adding these wonderful 
+					touches to furniture in your home
+				</p>
+				<p class="text__secondary">
+					Ever been in a room and felt like something was missing? Perhaps 
+					it felt slightly bare and uninviting. I’ve got some simple tips 
+					to help you make any room feel complete.
+				</p>
 			</section>
-			<figure class="cta__icon">
-				<img src="./images/icon-share.svg" alt="arrow icon" class="share_icon">
-			</figure>
+			<section class="card__cta" id="back">
+				<section class="cta__user">
+					<figure class="cta__image">
+						<img src="./images/avatar-michelle.jpg" alt="user icon" class="avatar">
+					</figure>
+					<div class="text">
+						<p class="text__primary avatar_name">
+							Michelle Appleton
+						</p>
+						<p class="text__secondary details">
+							28 Jun 2020
+						</p>
+					</div>
+				</section>
+				<figure class="cta__icon" id="cta_icon">
+				</figure>
+			</section>
+			<section id="front" class="front">
+				<section class="overlay__cta">
+					<div class="text__overlay">
+						<p class="share">SHARE</p>
+					</div>
+					<figure class="socialMedia__icon" id="">
+						<img src="./images/icon-facebook.svg" alt="facebook icon" class="media_icon">
+						<img src="./images/icon-twitter.svg" alt="twitter icon" class="media_icon">
+						<img src="./images/icon-pinterest.svg" alt="pinterest icon" class="media_icon">
+					</figure>
+				</section>
+			</section>
 		</section>
 	</section>
 	<script>
-
-
+		const share = document.getElementById('cta_icon');
+		share.addEventListener('click', function(){
+		
+			this.classList.toggle('active');
+			const overlay = document.getElementById('front');
+			if(overlay.style.display === "block"){
+				overlay.style.display = "none";
+			} else {
+				overlay.style.display = "block";
+			}
+		}); 
 	</script>
 	
 	<!-- <div class="attribution">
